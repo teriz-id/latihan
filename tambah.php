@@ -6,6 +6,6 @@ nama='$_POST[nama]',
 alamat='$_POST[alamat]'");
 
 if($tbh){
-    echo'<meta http-equiv="refresh" content="0; url=../project?info=berhasil">';
+    echo'<meta http-equiv="refresh" content="0; url='.$webs['var'].'?info=berhasil">';
 }
 ?>

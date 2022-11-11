@@ -1,8 +1,6 @@
 <?php 
 include"config.php"; 
 
-echo $webs['var'];
-
 ?>
 
 <!doctype html>
