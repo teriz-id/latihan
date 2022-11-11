@@ -17,4 +17,6 @@ $koneksi = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 if($koneksi->connect_error){
     Die('Koneksi database tidak terhubung : Error '.$koneksi->connect_error);
 }
+
+$webs = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM settings WHERE config='link'"));
 ?>
