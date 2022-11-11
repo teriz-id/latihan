@@ -1,4 +1,9 @@
-index<?php include"config.php"; ?>
+<?php 
+echo $_SERVER['HTTP_HOST'];
+exit();
+include"config.php"; 
+
+?>
 
 <!doctype html>
 <html lang="en">
