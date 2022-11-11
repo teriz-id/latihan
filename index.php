@@ -1,6 +1,4 @@
 <?php 
-echo $_SERVER['HTTP_HOST'];
-exit();
 include"config.php"; 
 
 ?>

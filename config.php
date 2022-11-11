@@ -1,22 +1,15 @@
 <?php
-define('DBHOST', 'localhost');
-define('DBUSER', 'root');
-define('DBPASS', '');
-define('DBNAME', 'project');
 
-
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
-    define('DBhost', 'localhost');      // Your mySQL Host (usually Localhost)
-    define('DBname', 'teriz_url');         // The database name where the data will be stored
-    define('DBuser', 'root');         // Your mySQL username
-    define('DBpassword', '');        //  Your mySQL Password 
-    define('DBprefix', '');         // Prefix for your tables if you are using same db for multiple scripts
+if ($_SERVER['HTTP_HOST'] == 'latihan.plongo.id') {
+    define('DBHOST', '45.130.231.115');
+    define('DBUSER', 'u1604216_latihan');
+    define('DBPASS', 'u1604216_latihan');
+    define('DBNAME', 'u1604216_latihan');
   } else {
-    define('DBhost', 'localhost');      // Your mySQL Host (usually Localhost)
-    define('DBname', 'u1604216_plongo');         // The database name where the data will be stored
-    define('DBuser', 'u1604216_teriz');         // Your mySQL username
-    define('DBpassword', '!T3rsm2nz');        //  Your mySQL Password 
-    define('DBprefix', '');         // Prefix for your tables if you are using same db for multiple scripts
+    define('DBHOST', 'localhost');
+    define('DBUSER', 'root');
+    define('DBPASS', '');
+    define('DBNAME', 'project');
   }
 
 $koneksi = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
