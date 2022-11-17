@@ -1,6 +1,8 @@
-<?php include"config.php"; ?>
-<?php
-$data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE id='$_GET[id]'));
+<?php 
+
+include"config.php"; 
+
+$data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE id='$_GET[id]'"));
 ?>
 
 <!doctype html>
