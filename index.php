@@ -72,7 +72,7 @@ include"config.php";
                         <td scope="row"><?=$no;?></td>
                         <td><?=$tampil['nama'];?></td>
                         <td><?=$tampil['alamat'];?></td>
-                        <td><a href="edit.php">Edit</a> | <a href="hapus.php?id=<?=$tampil['id']?>">Hapus</a></td>
+                        <td><a href="edit.php?id=<?=$tampil['id']?>">Edit</a> | <a href="hapus.php?id=<?=$tampil['id']?>">Hapus</a></td>
                     </tr>
                     <?php
                     $no++;

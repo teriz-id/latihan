@@ -1,4 +1,7 @@
 <?php include"config.php"; ?>
+<?php
+$data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM user WHERE id='$_GET[id]'));
+?>
 
 <!doctype html>
 <html lang="en">
@@ -16,29 +19,14 @@
         <form action="tambah.php" method="post">
         <div class="row">
                 <span class="mt-3 mb-3 text-danger" style="font-size:20px;font-weight: bold;">Form Update</span>
-                <?php
-                if(isset($_GET['info']) && $_GET['info']=='berhasil'){
-                ?>
-                <div class="alert alert-primary" role="alert">
-                    Data berhasil di input.
-                </div>
-                <?php
-                }else if(isset($_GET['info']) && $_GET['info']=='dihapus'){
-                ?>                
-                <div class="alert alert-primary" role="alert">
-                    Data berhasil di hapus.
-                </div>
-                <?php
-                }
-                ?>
                 
                 <div class="col-12 col-md-6 mb-3">
                     <label for="nama" class="form-label">Nama</label>
-                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Ucok" required>
+                    <input type="text" class="form-control" name="nama" id="nama" value="<?=$data['nama']?>" placeholder="Ucok" required>
                 </div>
                 <div class="col-12 col-md-6 mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Jakarta, Indonesia" required>
+                    <input type="text" class="form-control" name="alamat" id="alamat" <?=$data['alamat']?> placeholder="Jakarta, Indonesia" required>
                 </div>
                 <div class="text-end">
                     <button type="submit" name="tambah" class="btn btn-primary">Submit</button>
