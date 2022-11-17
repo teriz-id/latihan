@@ -18,7 +18,7 @@ include"config.php";
     <div class="container">
         <form action="tambah.php" method="post">
         <div class="row">
-                <span class="mt-3 mb-3 text-danger" style="font-size:20px;font-weight: bold;">Data Karyawan Perusahaan</span>
+                <span class="mt-3 mb-3 text-danger" style="font-size:20px;font-weight: bold;">Data Karyawan Perusahaan Berca</span>
                 <?php
                 if(isset($_GET['info']) && $_GET['info']=='berhasil'){
                 ?>
